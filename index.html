@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>javascript handson 1</title>
+  </head>
+  <body>
+    <h1>Strings</h1>
+    <p>Que1: Count Characters</p>
+
+    <fieldset>
+      <pre>
+Ans:
+
+const countCharacters = (S) => 
+{
+    let countA = 0;
+    let countD = 0;
+    for(let i = 0; i < S.length; i++){
+      if(S.charAt(i) === "A"){
+        countA++;
+      }
+      if(S.charAt(i) === "D"){
+        countD++;
+      }
+    }
+    let arr = [countA, countD];
+    return arr;
+};
+</pre
+      >
+    </fieldset>
+
+    <p>Que2: Count the Heads</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Count_Occ = (s) => 
+{
+  let n = s.length;
+  let str = s.split("").sort().join("");
+  let ans = "";
+  
+  for(let i = 0; i < n; i++){
+    let count = 0;
+    for(let j = 0; j < n; j++){
+      if(str[i] === str[j] && i > j){
+        break;
+      }
+      if(str[i] === str[j]){
+        count++;
+      }
+    }
+    if(count > 1){
+      ans += str[i] + count;
+    }
+  }
+  return ans;
+};
+    </fieldset>
+    <p>Que3: Count the Vowels</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Count_Vowels= (S) => 
+{
+  let count = 0;
+  for(let i = 0; i < S.length; i++){
+    if(S.charAt(i) === "A" || S.charAt(i) === "E" || S.charAt(i) === "I" || S.charAt(i) === "O" || S.charAt(i) === "U" || S.charAt(i) === "a" || S.charAt(i) === "e" || S.charAt(i) === "i" || S.charAt(i) === "o" || S.charAt(i) === "u" ){
+     count++; 
+    }
+  }
+  return count;
+};
+    </pre
+      >
+    </fieldset>
+    <p>Que4: Concatenate the Strings</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Concatenate_Strings = (S1, S2) => 
+{
+      return S1.concat(S2);
+};
+    </pre
+      >
+    </fieldset>
+    <p>Que5: Find Length</p>
+    <fieldset>
+      <pre>
+Ans:
+
+const findLength = (S) => 
+{
+    return S.length;
+};
+    </pre
+      >
+    </fieldset>
+    <p>Que6: Find the Winner</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Game_Winner = (S) => 
+{
+  let countA = 0, countB = 0;
+  for(let i = 0; i < S.length; i++){
+    if(S.charAt(i) === "A"){
+      countA++;
+    }
+    else if(S.charAt(i) === "D"){
+      countB++;
+    }
+  }
+  if(countA === countB){
+    return "Draw";
+  }
+  else if(countA > countB){
+    return "Aditya";
+  }
+  else {
+    return "Danish";
+  }
+}
+</pre
+      >
+    </fieldset>
+    <p>Que7: Join Strings</p>
+    <fieldset>
+      <pre>
+Ans:
+
+const joinStrings = (S, P) => 
+{
+    return S.concat(P);
+};
+    </pre
+      >
+    </fieldset>
+    <p>Que8: Plaindrome Check</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Palin_Check = (str) =>
+{
+	 let str2 = "";
+	 for(let i = str.length-1; i >= 0; i--){
+	   str2 += str[i];
+	 }
+	 if(str2 === str){
+	   return "True"
+	 }
+	 else {
+	   return "False"
+	 }
+}
+    </pre
+      >
+    </fieldset>
+
+    <p>Que9: Reverse the String</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Reverse_String = (str) => 
+{
+     let str2 = "";
+     for(let i= str.length-1; i >= 0; i--){
+       str2 += str[i];
+     }
+     return str2;
+};
+    </pre
+      >
+    </fieldset>
+
+    <p>Que10: Match the Strings</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var String_Match = (S1,S2) => 
+{
+  if(S1 == S2) return "YES"
+  return "NO"
+};
+    </pre
+      >
+    </fieldset>
+
+    <p>Que11: String Replace</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Replace = (S, pattern , text) => 
+{
+   return S.replace(pattern, text);
+};
+    </pre
+      >
+    </fieldset>
+
+    <p>Que12: Split the String</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Split_the_string = (S) => 
+{
+  return S.split(" ");
+};
+    </pre
+      >
+    </fieldset>
+
+    <p>Que13: Count the Vowels and Consonants</p>
+    <fieldset>
+      <pre>
+Ans:
+
+var Count_Vowels= (S) => 
+{
+  let str = "AEIOUaeiou";
+  let count = 0;
+  for(let i = 0; i < S.length; i++){
+    for(let j = 0; j < str.length; j++){
+      if(S.charAt(i) === str.charAt(j)){
+        count++;
+      }
+    }
+  }
+  return count;
+};
+var Count_Consonants= (S) => 
+{
+   let str = "AEIOUaeiou";
+   let count = 0;
+   for(let i = 0; i < S.length; i++){
+     for(let j = 0; j < str.length; j++){
+       if(S.charAt(i) === str.charAt(j)){
+         count++;
+       }
+     }
+   }
+   return S.length-count;
+};
+    </pre
+      >
+    </fieldset>
+  </body>
+</html>
